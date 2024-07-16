@@ -117,7 +117,15 @@ extra_css:
   
 nav:
   - Home: index.md
-  - Projects: projects/index.md
-  - Blog:
-    - blog/index.md
-    
+#  - Projects: projects/index.md
+#  - Blog:
+#    - blog/index.md
+  - Backend:
+      - backend/index.md
+      - backend/ideology.md
+      - backend/system_architecture.md
+      - API:
+          - backend/api/endpoints.md
+      - Database:
+          - backend/db/index.md
+          - backend/db/db_connector.md
