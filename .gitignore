@@ -64,4 +64,5 @@ tmp
 
 # IDEs & Editors
 .idea
+*.iml
 *~
