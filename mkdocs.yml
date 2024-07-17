@@ -136,6 +136,9 @@ nav:
                             - projects/genai/health-hub/webapp/backend/types/articles/article_meta.md
                             - projects/genai/health-hub/webapp/backend/types/articles/article_status.md
                             - projects/genai/health-hub/webapp/backend/types/articles/generated_article.md
+                        - Relations:
+                            - projects/genai/health-hub/webapp/backend/types/relations/group.md
+                            - projects/genai/health-hub/webapp/backend/types/relations/edge.md
                     - API:
                       - projects/genai/health-hub/webapp/backend/api/endpoints.md
                     - Database:
