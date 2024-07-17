@@ -136,6 +136,12 @@ nav:
                             - projects/genai/health-hub/webapp/backend/types/articles/article_meta.md
                             - projects/genai/health-hub/webapp/backend/types/articles/article_status.md
                             - projects/genai/health-hub/webapp/backend/types/articles/generated_article.md
+                    - API:
+                      - projects/genai/health-hub/webapp/backend/api/endpoints.md
+                    - Database:
+                      - projects/genai/health-hub/webapp/backend/db/index.md
+                      - projects/genai/health-hub/webapp/backend/db/db_connector.md
+                      - projects/genai/health-hub/webapp/backend/db/mongo_connector.md
           - Example Project:
               - Section One:
                   - projects/genai/example-project/section-one/index.md
