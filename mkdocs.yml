@@ -130,3 +130,4 @@ nav:
           - backend/db/index.md
           - backend/db/db_connector.md
           - backend/db/mongo_connector.md
+          - backend/db/beanie_documents.md
