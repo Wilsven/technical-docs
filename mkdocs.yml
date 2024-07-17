@@ -139,6 +139,12 @@ nav:
                         - Relations:
                             - projects/genai/health-hub/webapp/backend/types/relations/group.md
                             - projects/genai/health-hub/webapp/backend/types/relations/edge.md
+                        - Jobs:
+                            - projects/genai/health-hub/webapp/backend/types/jobs/job.md
+                            - projects/genai/health-hub/webapp/backend/types/jobs/job_combine.md
+                            - projects/genai/health-hub/webapp/backend/types/jobs/job_ignore.md
+                            - projects/genai/health-hub/webapp/backend/types/jobs/job_optimise.md
+                            - projects/genai/health-hub/webapp/backend/types/jobs/job_remove.md
                     - API:
                       - projects/genai/health-hub/webapp/backend/api/endpoints.md
                     - Database:
