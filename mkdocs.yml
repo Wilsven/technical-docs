@@ -150,7 +150,7 @@ nav:
                     - Database:
                       - projects/genai/health-hub/webapp/backend/db/db_connector.md
                       - Mongo:
-                        - projects/genai/health-hub/webapp/backend/db/mongo_connector.md
+                        - projects/genai/health-hub/webapp/backend/db/mongo/mongo_connector.md
                         - projects/genai/health-hub/webapp/backend/db/mongo/beanie_documents.md
 
           - Example Project:
