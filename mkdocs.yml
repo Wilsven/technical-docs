@@ -125,8 +125,12 @@ nav:
               - Clustering:
                   - projects/genai/health-hub/content-harmonization/index.md
                   - projects/genai/health-hub/content-harmonization/introduction.md
-              - Web App:
-                  - projects/genai/health-hub/webapp/intro.md
+              - Webapp:
+                  - projects/genai/health-hub/webapp/introduction.md
+                  - Backend:
+                    - projects/genai/health-hub/webapp/system_architecture.md
+                    - Types:
+                        - projects/genai/health-hub/webapp/backend/types/overview.md
           - Example Project:
               - Section One:
                   - projects/genai/example-project/section-one/index.md
@@ -137,13 +141,4 @@ nav:
   - Articles:
       - blog/index.md
 
-  - Backend:
-      - backend/index.md
-      - backend/ideology.md
-      - backend/system_architecture.md
-      - API:
-          - backend/api/endpoints.md
-      - Database:
-          - backend/db/index.md
-          - backend/db/db_connector.md
-          - backend/db/mongo_connector.md
+
