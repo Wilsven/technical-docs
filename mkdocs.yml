@@ -139,9 +139,11 @@ nav:
                     - API:
                       - projects/genai/health-hub/webapp/backend/api/endpoints.md
                     - Database:
-                      - projects/genai/health-hub/webapp/backend/db/index.md
                       - projects/genai/health-hub/webapp/backend/db/db_connector.md
-                      - projects/genai/health-hub/webapp/backend/db/mongo_connector.md
+                      - Mongo:
+                        - projects/genai/health-hub/webapp/backend/db/mongo_connector.md
+                        - projects/genai/health-hub/webapp/backend/db/mongo/beanie_documents.md
+
           - Example Project:
               - Section One:
                   - projects/genai/example-project/section-one/index.md
