@@ -26,6 +26,5 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material
-      - run: pip install mkdocs-mermaid2-plugin
       - run: pip install pymdown-extensions
       - run: mkdocs gh-deploy --force
