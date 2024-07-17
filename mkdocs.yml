@@ -23,7 +23,7 @@ theme:
     - search.suggest
     - toc.follow
     # - toc.integrate
-  palette: 
+  palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
@@ -31,7 +31,7 @@ theme:
         name: Switch to light mode
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       primary: indigo
       accent: indigo
       toggle:
@@ -107,19 +107,36 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
-  
+
 nav:
   - Home: index.md
-#  - Projects: projects/index.md
-#  - Blog:
-#    - blog/index.md
+  - Projects:
+      - GenAI:
+          - Health Hub:
+              - Data Pipeline:
+                  - projects/genai/health-hub/content-optimization/index.md
+                  - projects/genai/health-hub/content-optimization/introduction.md
+              - Clustering:
+                  - projects/genai/health-hub/content-harmonization/index.md
+                  - projects/genai/health-hub/content-harmonization/introduction.md
+              - Web App:
+                  - projects/genai/health-hub/webapp/intro.md
+          - Example Project:
+              - Section One:
+                  - projects/genai/example-project/section-one/index.md
+                  - projects/genai/example-project/section-one/introduction.md
+              - Section Two:
+                  - projects/genai/example-project/section-two/index.md
+                  - projects/genai/example-project/section-two/introduction.md
+  - Articles:
+      - blog/index.md
+
   - Backend:
       - backend/index.md
       - backend/ideology.md
