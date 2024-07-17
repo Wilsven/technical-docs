@@ -131,6 +131,11 @@ nav:
                     - projects/genai/health-hub/webapp/system_architecture.md
                     - Types:
                         - projects/genai/health-hub/webapp/backend/types/overview.md
+                        - Articles:
+                            - projects/genai/health-hub/webapp/backend/types/articles/article.md
+                            - projects/genai/health-hub/webapp/backend/types/articles/article_meta.md
+                            - projects/genai/health-hub/webapp/backend/types/articles/article_status.md
+                            - projects/genai/health-hub/webapp/backend/types/articles/generated_article.md
           - Example Project:
               - Section One:
                   - projects/genai/example-project/section-one/index.md
