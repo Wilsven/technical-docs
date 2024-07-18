@@ -128,6 +128,7 @@ nav:
                   - projects/genai/health-hub/webapp/introduction.md
                   - Backend:
                       - projects/genai/health-hub/webapp/system_architecture.md
+                      - projects/genai/health-hub/webapp/backend/backend_ERD.md
                       - Types:
                           - projects/genai/health-hub/webapp/backend/types/overview.md
                           - Articles:
