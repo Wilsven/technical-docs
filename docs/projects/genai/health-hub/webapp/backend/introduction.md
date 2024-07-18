@@ -17,9 +17,9 @@ sequenceDiagram
     activate DBC
     DBC ->> DB: Database query
     DB -->> DBC: Records
-    DBC -->> FA: Pydantic or primative types
+    DBC -->> FA: Pydantic or primitive types
     deactivate DBC
-    FA -->> FE: Serialised Pydantic types
+    FA -->> FE: Serialised Pydantic responses
     deactivate FA
     deactivate FE
 
