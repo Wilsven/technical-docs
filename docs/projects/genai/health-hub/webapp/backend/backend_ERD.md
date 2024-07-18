@@ -1,4 +1,4 @@
-``` mermaid
+```mermaid
 erDiagram
   GROUP ||--o| JOB : has
   GROUP ||--|{ ARTICLE : has
