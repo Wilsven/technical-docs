@@ -58,6 +58,7 @@ plugins:
   - tags
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - mkdocs-jupyter
 # Extensions
 markdown_extensions:
   - abbr
@@ -125,6 +126,7 @@ nav:
               - Section One:
                   - projects/genai/example-project/section-one/index.md
                   - projects/genai/example-project/section-one/introduction.md
+                  - projects/genai/example-project/section-one/tfidf_max_features_384_cosine_emd.ipynb
               - Section Two:
                   - projects/genai/example-project/section-two/index.md
                   - projects/genai/example-project/section-two/introduction.md
