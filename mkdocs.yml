@@ -51,7 +51,6 @@ theme:
   favicon: assets/favicon.png
   icon:
     logo: logo
-
 # Plugins
 plugins:
   - blog:
@@ -59,7 +58,6 @@ plugins:
   - tags
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-
 # Extensions
 markdown_extensions:
   - abbr
@@ -78,8 +76,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -105,14 +103,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
-
 nav:
   - Home: index.md
   - Projects:
