@@ -155,7 +155,6 @@ nav:
                               - projects/genai/health-hub/webapp/backend/db/mongo/beanie_documents.md
                               - projects/genai/health-hub/webapp/backend/db/mongo/mocker.md
 
-
           - Example Project:
               - Section One:
                   - projects/genai/example-project/section-one/index.md
