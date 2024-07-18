@@ -3,7 +3,8 @@
 
 (function doculabels(){
 
-    const rgx = /@label\(([^)]+)\)/
+    const rgx = /@label\(([^)]+)\)/g
+    const rgx_local = /@label\(([^)]+)\)/
 
     /**
      * Function to match the colour type to the attribute type
@@ -43,8 +44,10 @@
         original, label
     ) => {
 
-        return original.replace(rgx,
-            `<code style="font-size: inherit; color: ${color_factory(label)}; border-radius: .1rem; background-color: var(--md-code-bg-color); padding: 0 5px">${label}</code>`)
+        const labelValue = label.match(rgx_local)[1]
+
+        return original.replace(label,
+            `<code style="font-size: inherit; color: ${color_factory(labelValue)}; border-radius: .1rem; background-color: var(--md-code-bg-color); padding: 0 5px">${labelValue}</code>`)
     }
 
     // Selects header elements and TOC elements
@@ -52,7 +55,9 @@
     navItems.forEach(item => {
         const match = item.outerHTML.toString().match(rgx)
         if(match){
-            item.innerHTML = replace_tag(item.innerHTML, match[1])
+            match.forEach(tag => {
+                item.innerHTML = replace_tag(item.innerHTML, tag)
+            })
         }
     })
 
