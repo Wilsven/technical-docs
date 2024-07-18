@@ -1,4 +1,4 @@
-.PHONY: install lint 
+.PHONY: install lint
 
 install:
 	pip install -r requirements.txt
@@ -6,4 +6,4 @@ install:
 lint:
 	pre-commit run --all-files
 
-all: install lint 
+all: install lint
