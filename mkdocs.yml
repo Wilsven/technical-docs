@@ -120,11 +120,8 @@ nav:
       - GenAI:
           - Health Hub:
               - Data Pipeline:
-                  - projects/genai/health-hub/content-optimization/index.md
-                  - projects/genai/health-hub/content-optimization/introduction.md
-              - Clustering:
-                  - projects/genai/health-hub/content-harmonization/index.md
-                  - projects/genai/health-hub/content-harmonization/introduction.md
+                  - projects/genai/health-hub/data-pipeline/index.md
+                  - projects/genai/health-hub/data-pipeline/introduction.md
               - Webapp:
                   - projects/genai/health-hub/webapp/introduction.md
                   - Backend:
