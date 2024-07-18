@@ -1,9 +1,12 @@
-.PHONY: install lint
+.PHONY: install-pip install-poetry lint
 
-install:
+install-pip:
 	pip install -r requirements.txt
+
+install-poetry:
+	poetry install
 
 lint:
 	pre-commit run --all-files
 
-all: install lint
+all: install-pip install-poetry lint
