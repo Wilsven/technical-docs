@@ -133,6 +133,8 @@ nav:
                           - projects/genai/health-hub/webapp/frontend/services/cluster.md
                           - projects/genai/health-hub/webapp/frontend/services/job.md
                           - projects/genai/health-hub/webapp/frontend/services/colour.md
+                      - Pipes:
+                          - projects/genai/health-hub/webapp/frontend/pipes/date.md
                   - Backend:
                       - projects/genai/health-hub/webapp/backend/introduction.md
                       - projects/genai/health-hub/webapp/system_architecture.md

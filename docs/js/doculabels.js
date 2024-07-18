@@ -14,6 +14,7 @@
     const color_factory = (label) => {
         switch (label) {
             case "class":
+            case "pipe":
             case "service":
                 return "#8338ec"
             case "interface":
