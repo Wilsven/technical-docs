@@ -152,6 +152,7 @@ nav:
                       - Mongo:
                         - projects/genai/health-hub/webapp/backend/db/mongo/mongo_connector.md
                         - projects/genai/health-hub/webapp/backend/db/mongo/beanie_documents.md
+                        - projects/genai/health-hub/webapp/backend/db/mongo/mocker.md
 
           - Example Project:
               - Section One:

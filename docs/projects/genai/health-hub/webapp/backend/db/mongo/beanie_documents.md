@@ -2,11 +2,14 @@
 updated: 18 July 2024
 author: Lyndon Lim
 ---
+# Beanie Document
 
-# Overview
+## Overview
 This file contains the Beanie document types used to interacting with the DB.
 
 > **_NOTE:_** In Beanie, a Link is a special field type used to create a reference between two document types in a MongoDB database. It allows for the establishment of relationships between documents, similar to foreign keys in relational databases.
+
+## Document Types
 
 ### Group Document
 ```python
