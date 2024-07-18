@@ -8,12 +8,15 @@ servers:
   - url: http://localhost:8000
     description: Local server hosted on the default port.
 
+tags:
+  - name: Health Check
+    description: Endpoint to check the health of the server
+  - name: Groups
+    description: Consume data with regards to groups
+
 
 components:
   schemas:
-
-
-
     Group:
       type: object
       properties:
@@ -97,6 +100,8 @@ paths:
   ### Check endpoints
   /check/health:
     get:
+      tags:
+        - Health Check
       summary: Checks if the server is running
       responses:
         '200':
@@ -113,6 +118,8 @@ paths:
   ### Group endpoints
   /groups:
     get:
+      tags:
+        - Groups
       summary: Fetches all groups in the database
       responses:
         '200':
@@ -126,6 +133,8 @@ paths:
 
   /groups/{group_id}:
     get:
+      tags:
+        - Groups
       summary: Fetches a specific group by ID
       parameters:
         - name: group_id
