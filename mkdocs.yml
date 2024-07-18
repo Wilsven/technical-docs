@@ -127,6 +127,11 @@ nav:
                   - projects/genai/health-hub/content-harmonization/introduction.md
               - Webapp:
                   - projects/genai/health-hub/webapp/introduction.md
+                  - Frontend:
+                      - projects/genai/health-hub/webapp/frontend/introduction.md
+                      - Services:
+                          - projects/genai/health-hub/webapp/frontend/services/cluster.md
+                          - projects/genai/health-hub/webapp/frontend/services/colour.md
                   - Backend:
                       - projects/genai/health-hub/webapp/backend/introduction.md
                       - projects/genai/health-hub/webapp/system_architecture.md
