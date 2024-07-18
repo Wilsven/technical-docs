@@ -1,0 +1,164 @@
+site_name: Data Analytics & AI Documentation
+# Configuration
+theme:
+  # custom_dir: overrides
+  name: material
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    # - content.tabs.link
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    # - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to automatic mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+# Plugins
+plugins:
+  - blog:
+      blog_toc: true
+  - tags
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - mkdocs-jupyter
+  - render_swagger
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - js/doculabels.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+nav:
+  - Home: index.md
+  - Projects:
+      - GenAI:
+          - Health Hub:
+              - Data Pipeline:
+                  - projects/genai/health-hub/content-optimization/index.md
+                  - projects/genai/health-hub/content-optimization/introduction.md
+              - Clustering:
+                  - projects/genai/health-hub/content-harmonization/index.md
+                  - projects/genai/health-hub/content-harmonization/introduction.md
+              - Webapp:
+                  - projects/genai/health-hub/webapp/introduction.md
+                  - Backend:
+                      - projects/genai/health-hub/webapp/system_architecture.md
+                      - Types:
+                          - projects/genai/health-hub/webapp/backend/types/overview.md
+                          - Articles:
+                              - projects/genai/health-hub/webapp/backend/types/articles/article.md
+                              - projects/genai/health-hub/webapp/backend/types/articles/article_meta.md
+                              - projects/genai/health-hub/webapp/backend/types/articles/article_status.md
+                              - projects/genai/health-hub/webapp/backend/types/articles/generated_article.md
+                          - Relations:
+                              - projects/genai/health-hub/webapp/backend/types/relations/group.md
+                              - projects/genai/health-hub/webapp/backend/types/relations/edge.md
+                          - Jobs:
+                              - projects/genai/health-hub/webapp/backend/types/jobs/job.md
+                              - projects/genai/health-hub/webapp/backend/types/jobs/job_combine.md
+                              - projects/genai/health-hub/webapp/backend/types/jobs/job_ignore.md
+                              - projects/genai/health-hub/webapp/backend/types/jobs/job_optimise.md
+                              - projects/genai/health-hub/webapp/backend/types/jobs/job_remove.md
+                      - API:
+                          - projects/genai/health-hub/webapp/backend/api/endpoints.md
+                      - Database:
+                          - projects/genai/health-hub/webapp/backend/db/db_connector.md
+                          - Mongo:
+                              - projects/genai/health-hub/webapp/backend/db/mongo/mongo_connector.md
+                              - projects/genai/health-hub/webapp/backend/db/mongo/beanie_documents.md
+
+          - Example Project:
+              - Section One:
+                  - projects/genai/example-project/section-one/index.md
+                  - projects/genai/example-project/section-one/introduction.md
+                  - projects/genai/example-project/section-one/tfidf_max_features_384_cosine_emd.ipynb
+              - Section Two:
+                  - projects/genai/example-project/section-two/index.md
+                  - projects/genai/example-project/section-two/introduction.md
+  - Articles:
+      - blog/index.md

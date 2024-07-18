@@ -1,0 +1,16 @@
+---
+date: 16 July 2024
+author: Ong Tsien Jin
+---
+
+# Endpoints
+
+The endpoints below are the endpoints that have been implemented.
+
+!!! NOTE "Query Logic and DB Interactions"
+
+    While there are many more endpoints to be desired, it is important to note that the logic to interact with the database has already been implemented. What is left is to connect these endpoints with the `DbConnector` instance.
+
+---
+
+!!swagger endpoints.yaml!!
