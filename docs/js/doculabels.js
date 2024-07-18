@@ -13,6 +13,7 @@
     const color_factory = (label) => {
         switch (label) {
             case "class":
+            case "service":
                 return "#8338ec"
             case "interface":
                 return "#6b705c"
@@ -24,6 +25,9 @@
                 return "#ff006e"
             case "type":
                 return "#3d5a80"
+            case "private":
+            case "read only":
+                return "#5b8e7d"
             default:
                 return "var(--md-code-fg-color)"
         }
