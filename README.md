@@ -18,7 +18,7 @@ Once set up, create a virtual environment using `conda` and install dependencies
 
 ```bash
 # Create a virtual environment
-conda create -n <VENV_NAME> python=3.12 -y
+conda create -n <VENV_NAME> python=<PYTHON_VERSION> -y
 conda activate <VENV_NAME>
 
 # Install dependencies
@@ -50,13 +50,6 @@ To install the defined dependencies for your project, just run the `install` com
 
 ```bash
 poetry install
-```
-
-> [!WARNING]
-> If you face an error installing `gensim` with `poetry`, run this command:
-
-```bash
-poetry run python -m pip install gensim --disable-pip-version-check --no-deps --no-cache-dir --no-binary gensim
 ```
 
 If there is a [`poetry.lock`](poetry.lock) file in the current directory, it will use the exact versions from there instead of resolving them. This ensures that everyone using the library will get the same versions of the dependencies.
