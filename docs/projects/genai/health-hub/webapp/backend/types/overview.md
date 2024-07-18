@@ -7,16 +7,18 @@ author: Ong Tsien Jin
 
 `Pydantic` models are used to standardise data types within the backend. While they are used predominantly for generating the correct response schema for API endpoints, they are also used for some database interactions via `DbConnector`.
 
-- **Relations**
-  - Edge
-  - Group
-- **Articles**
-  - Article
-  - ArticleMeta
-  - GeneratedArticle
-- **Jobs**
-  - Job
-  - JobCombine
-  - JobIgnore
-  - JobOptimise
-  - JobRemove
+**Relations**
+: Edge
+: Group
+
+**Articles**
+: Article
+: ArticleMeta
+: GeneratedArticle
+
+**Jobs**
+: Job
+: JobCombine
+: JobIgnore
+: JobOptimise
+: JobRemove
