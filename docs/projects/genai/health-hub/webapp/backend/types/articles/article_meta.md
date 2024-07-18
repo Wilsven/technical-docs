@@ -3,7 +3,7 @@ updated: 17 July 2024
 author: Ong Tsien Jin
 ---
 
-# `Article Meta`
+# @label(type) Article Meta
 
 This datatype contains the high level attributes of articles in the system.
 
@@ -33,45 +33,45 @@ This datatype contains the high level attributes of articles in the system.
 
 ## Attributes
 
-### `attr` id
+### @label(attr) id
 `string` Unique identifier for the article. 
 
-### `attr` title
+### @label(attr) title
 `string` Title text of the article.
 
-### `attr` description
+### @label(attr) description
 `string` SEO description of the article.
 
-### `attr` date_modified
+### @label(attr) date_modified
 `string` The date when the article was last modified.
 
-### `attr` similarity
+### @label(attr) similarity
 `float` A numerical value representing how similar this article is to others.
 
-### `attr` keywords
+### @label(attr) keywords
 `List[str]` A list of keywords associated with the article.
 
-### `attr` labels
+### @label(attr) labels
 `List[str]` A list of labels or tags associated with the article.
 
-### `attr` pr_name
+### @label(attr) pr_name
 `string` The name of the content author for the article.
 
-### `attr` content_category
+### @label(attr) content_category
 `string` The category of content the article belongs to.
 
-### `attr` url
+### @label(attr) url
 `string` The URL where the article can be accessed.
 
-### `attr` cover_image_url
+### @label(attr) cover_image_url
 `string` The URL of the cover image for the article.
 
-### `attr` status
+### @label(attr) status
 
 `string` The status of the article.
 
-### `attr` engagement_rate
+### @label(attr) engagement_rate
 `float` The engagement rate of the article, typically a percentage.
 
-### `attr` number_of_views
+### @label(attr) number_of_views
 `int` The number of times the article has been viewed.
