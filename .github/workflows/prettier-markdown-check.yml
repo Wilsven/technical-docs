@@ -1,0 +1,41 @@
+name: Prettier and Markdown Lint
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.toml"
+      - "**/*.css"
+      - "**/*.json"
+      - "**/*.yaml"
+      - "**/*.yml"
+
+jobs:
+  lint_and_format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Cache Node.js Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Node.js Dependencies
+        run: |
+          npm install -g prettier@3.2.5 @prettier/plugin-xml markdownlint-cli2@0.12.1
+
+      - name: Run Prettier Check
+        run: prettier --check "**/*.{toml,css,json,yaml,yml,md}"
+
+      - name: Run markdownlint-cli2
+        run: markdownlint-cli2 "**/*.md" "#node_modules"
