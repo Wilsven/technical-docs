@@ -42,14 +42,14 @@ In the markdown files for MkDocs, we can use the following annotation styling in
 
 Supported labels
 
-1. class
-2. service
-3. interface
-4. pipe
-5. type
-6. func
-7. meth
-8. attr
+1. `class`
+2. `service`
+3. `interface`
+4. `pipe`
+5. `type`
+6. `func`
+7. `meth`
+8. `attr`
 
 > [!TIP]
 > This must be used in a header block
