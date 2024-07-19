@@ -4,12 +4,15 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+        exclude: "mkdocs.yml"
       - id: check-added-large-files
         args: [--maxkb=2500]
       - id: end-of-file-fixer
       - id: requirements-txt-fixer
       - id: trailing-whitespace
-      - id: check-toml
       - id: detect-private-key
       - id: mixed-line-ending
 
@@ -65,7 +68,16 @@ repos:
     rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
-        types_or: [toml, css, json, yaml, markdown]
+        args: [--fix]
+        types_or: [css, json, yaml, markdown]
         additional_dependencies:
           - prettier@3.2.5
-          - prettier-plugin-toml@2.0.1
+
+  - repo: local
+    hooks:
+      - id: mkdocs-build
+        name: Build MkDocs
+        entry: mkdocs build --strict
+        language: system
+        pass_filenames: false
+        files: '^(mkdocs\.yml|docs/.*\.md)$'

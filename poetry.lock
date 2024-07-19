@@ -1523,6 +1523,22 @@ files = [
 ]
 
 [[package]]
+name = "mkdocs-render-swagger-plugin"
+version = "0.1.2"
+description = "MKDocs plugin for rendering swagger & openapi files."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "mkdocs_render_swagger_plugin-0.1.2-py3-none-any.whl", hash = "sha256:0340d45e12a0f1633a4b8af2eb99ea75469006ddf418ef0f1acd51ed1e4969e4"},
+]
+
+[package.dependencies]
+mkdocs = ">=1.4"
+
+[package.extras]
+dev = ["coverage", "flake8", "mypy", "pyyaml"]
+
+[[package]]
 name = "nbclient"
 version = "0.10.0"
 description = "A client library for executing notebooks. Formerly nbconvert's ExecutePreprocessor."
@@ -2775,4 +2791,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "4ef27d461317e529655ef0c0ab9bc01800ee362ede8e16b24b9964060ba0e9d3"
+content-hash = "f381b419905fae535f922fd7c17672e30159e3b9886ff92c7e51c34c97edb6c1"

@@ -120,11 +120,8 @@ nav:
       - GenAI:
           - Health Hub:
               - Data Pipeline:
-                  - projects/genai/health-hub/content-optimization/index.md
-                  - projects/genai/health-hub/content-optimization/introduction.md
-              - Clustering:
-                  - projects/genai/health-hub/content-harmonization/index.md
-                  - projects/genai/health-hub/content-harmonization/introduction.md
+                  - projects/genai/health-hub/data-pipeline/index.md
+                  - projects/genai/health-hub/data-pipeline/introduction.md
               - Webapp:
                   - projects/genai/health-hub/webapp/introduction.md
                   - Frontend:
@@ -138,6 +135,7 @@ nav:
                   - Backend:
                       - projects/genai/health-hub/webapp/backend/introduction.md
                       - projects/genai/health-hub/webapp/system_architecture.md
+                      - projects/genai/health-hub/webapp/backend/backend_ERD.md
                       - Types:
                           - projects/genai/health-hub/webapp/backend/types/overview.md
                           - Articles:
@@ -161,6 +159,7 @@ nav:
                           - Mongo:
                               - projects/genai/health-hub/webapp/backend/db/mongo/mongo_connector.md
                               - projects/genai/health-hub/webapp/backend/db/mongo/beanie_documents.md
+                              - projects/genai/health-hub/webapp/backend/db/mongo/mocker.md
                   - Misc:
                       - projects/genai/health-hub/webapp/misc/populator.md
 
