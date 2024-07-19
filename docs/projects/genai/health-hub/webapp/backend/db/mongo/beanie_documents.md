@@ -3,7 +3,7 @@ updated: 16 July 2024
 author: Lyndon Lim
 ---
 
-# Overview
+# Beanie Documents
 
 This file contains the Beanie document types used to interacting with the DB.
 
