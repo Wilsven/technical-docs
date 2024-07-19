@@ -132,10 +132,11 @@ nav:
                           - projects/genai/health-hub/webapp/frontend/services/colour.md
                       - Pipes:
                           - projects/genai/health-hub/webapp/frontend/pipes/date.md
+                      - Utilities:
+                          - projects/genai/health-hub/webapp/frontend/utilities/group_manager.md
                   - Backend:
                       - projects/genai/health-hub/webapp/backend/introduction.md
                       - projects/genai/health-hub/webapp/system_architecture.md
-                      - projects/genai/health-hub/webapp/backend/backend_ERD.md
                       - Types:
                           - projects/genai/health-hub/webapp/backend/types/overview.md
                           - Articles:
@@ -157,11 +158,12 @@ nav:
                       - Database:
                           - projects/genai/health-hub/webapp/backend/db/db_connector.md
                           - Mongo:
+                              - projects/genai/health-hub/webapp/backend/db/mongo/er_diagram.md
                               - projects/genai/health-hub/webapp/backend/db/mongo/mongo_connector.md
                               - projects/genai/health-hub/webapp/backend/db/mongo/beanie_documents.md
-                              - projects/genai/health-hub/webapp/backend/db/mongo/mocker.md
                   - Misc:
                       - projects/genai/health-hub/webapp/misc/populator.md
+                      - projects/genai/health-hub/webapp/misc/mocker.md
 
           - Example Project:
               - Section One:
