@@ -16,10 +16,10 @@ sequenceDiagram
     FA ->> DBC: Method call
     activate DBC
     DBC ->> DB: Database query
-    DB -->> DBC:
-    DBC -->> FA:
+    DB -->> DBC: Records
+    DBC -->> FA: Pydantic or primitive types
     deactivate DBC
-    FA -->> FE:
+    FA -->> FE: Serialised Pydantic responses
     deactivate FA
     deactivate FE
 
