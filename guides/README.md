@@ -21,7 +21,7 @@ All document files should start with front matter that includes (minimally) the 
 1. Updated (date of last update), in `DD MMM YYYY` format.
 2. Author, an array of names.
 
-> [!EXAMPLE]
+> [!TIP]
 >
 > ```text
 > ---
@@ -51,7 +51,7 @@ Supported labels
 7. meth
 8. attr
 
-> [!EXAMPLE]
+> [!TIP]
 > This must be used in a header block
 >
 > ```text
