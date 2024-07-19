@@ -20,7 +20,7 @@
             case "interface":
                 return "#6b705c"
             case "attr":
-                return "#d62828"
+                return "#d01322"
             case "meth":
                 return "#7209b7"
             case "func":
@@ -30,6 +30,8 @@
             case "private":
             case "read only":
                 return "#5b8e7d"
+            case "depre":
+                return "#962020"
             default:
                 return "var(--md-code-fg-color)"
         }
