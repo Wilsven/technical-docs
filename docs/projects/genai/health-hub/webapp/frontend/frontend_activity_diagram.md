@@ -1,3 +1,5 @@
+<h1>Front End Activity Diagram<h1>
+
 ```mermaid
 stateDiagram
     state if_state <<choice>>
