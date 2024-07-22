@@ -1,6 +1,7 @@
 ---
 updated: 17 July 2024
-author: Ong Tsien Jin
+authors:
+  - Ong Tsien Jin
 ---
 
 # Introduction

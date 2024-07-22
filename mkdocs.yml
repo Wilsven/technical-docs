@@ -1,8 +1,8 @@
 site_name: Data Analytics & AI Documentation
 # Configuration
 theme:
-  # custom_dir: overrides
   name: material
+  custom_dir: overrides
   features:
     - announce.dismiss
     - content.code.annotate
@@ -60,6 +60,29 @@ plugins:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - mkdocs-jupyter
   - render_swagger
+hooks:
+  - pyscripts/authors/authors.py
+  - pyscripts/doculabels/doculabels.py
+
+extra:
+  authors:
+    - Wilsven Leong:
+        alias: wilsven
+        role: Contributor
+        avatar: https://avatars.githubusercontent.com/u/64478824?v=4
+        url: https://github.com/Wilsven
+    - Ong Tsien Jin:
+        alias:
+          - tsienjin
+          - tjay
+        role: Contributor
+        avatar: https://avatars.githubusercontent.com/u/46650957?v=4
+        url: https://github.com/TsienJin
+    - Lyndon Lim:
+        alias: lyndon
+        role: Contributor
+        avatar: https://avatars.githubusercontent.com/u/80683209?v=4
+        url: https://github.com/lyndonlim27
 
 # Extensions
 markdown_extensions:
@@ -109,11 +132,13 @@ markdown_extensions:
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-  - js/doculabels.js
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
   - styles/mermaid.css
+  - styles/author.css
+  - styles/doculabels.css
+
 nav:
   - Home: index.md
   - Projects:
