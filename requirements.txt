@@ -1,5 +1,6 @@
 jupyter==1.0.0
 jupyter-contrib-nbextensions==0.7.0
+jupyterlab==4.2.4
 mkdocs==1.6.0
 mkdocs-jupyter==0.24.8
 mkdocs-material==9.5.29

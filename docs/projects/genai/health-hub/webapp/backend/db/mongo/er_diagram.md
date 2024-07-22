@@ -1,3 +1,8 @@
+---
+updated: 18 July 2024
+authors: lyndon
+---
+
 # ER Diagram
 
 The ER diagram below is the implemented relation of database relations in MongoDb.
