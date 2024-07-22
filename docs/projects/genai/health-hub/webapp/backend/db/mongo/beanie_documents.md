@@ -1,6 +1,6 @@
 ---
 updated: 16 July 2024
-author: Lyndon Lim
+authors: Lyndon Lim
 ---
 
 # Beanie Documents

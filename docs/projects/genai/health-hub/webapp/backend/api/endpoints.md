@@ -1,6 +1,6 @@
 ---
-date: 16 July 2024
-author: Ong Tsien Jin
+updated: 16 July 2024
+authors: tjay
 ---
 
 # Endpoints

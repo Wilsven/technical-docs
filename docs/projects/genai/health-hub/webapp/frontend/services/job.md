@@ -1,3 +1,8 @@
+---
+updated: 18 July 2024
+authors: Ong Tsien Jin
+---
+
 # Job
 
 This service was designed to be a singleton to manage `GroupManager`s across the frontend, allowing components to access the same (and correct) `GroupManager`.
