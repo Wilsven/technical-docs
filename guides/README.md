@@ -1,4 +1,3 @@
-
 # Documentation Guides
 
 To ensure consistency in our documentation, the guides in this folder are intended to set a standard for documentation practices.
@@ -28,7 +27,7 @@ All document files should start with front matter that includes (minimally) the 
 > updated: 19 July 2024
 > author: [James Teo, John Tan]
 > ---
->   ```
+> ```
 
 ### Classes, Types, etc
 
