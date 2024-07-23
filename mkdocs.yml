@@ -151,6 +151,7 @@ nav:
                   - projects/genai/health-hub/webapp/introduction.md
                   - Frontend:
                       - projects/genai/health-hub/webapp/frontend/introduction.md
+                      - projects/genai/health-hub/webapp/frontend/frontend_activity_diagram.md
                       - Services:
                           - projects/genai/health-hub/webapp/frontend/services/cluster.md
                           - projects/genai/health-hub/webapp/frontend/services/job.md

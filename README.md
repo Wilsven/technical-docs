@@ -29,7 +29,8 @@ pip install -r requirements.txt
 
 Refer to the documentation [here](https://python-poetry.org/docs/#installing-with-the-official-installer) (recommended) on how to install Poetry based on your operating system.
 
-> [!IMPORTANT] > **For Mac users**, if encountering issues with `poetry command not found`, add `export PATH="$HOME/.local/bin:$PATH"` in your `.zshrc` file in your home folder and run `source ~/.zshrc`.
+> [!IMPORTANT]
+> For Mac users, if encountering issues with `poetry command not found`, add `export PATH="$HOME/.local/bin:$PATH"` in your `.zshrc` file in your home folder and run `source ~/.zshrc`.
 
 ---
 
@@ -41,10 +42,10 @@ poetry shell
 
 > [!TIP]
 > If you see the following error; `The currently activated Python version 3.11.7 is not supported by the project (^3.12). Trying to find and use a compatible version.`, run:
-
-```bash
-poetry env use 3.12.3  # Python version used in the project
-```
+>
+> ```bash
+> poetry env use 3.12.3  # Python version used in the project
+> ```
 
 To install the defined dependencies for your project, just run the `install` command. The `install` command reads the [`pyproject.toml`](pyproject.toml) file from the current project, resolves the dependencies, and installs them.
 
@@ -66,8 +67,8 @@ If there is no [`poetry.lock`](poetry.lock) file, Poetry will create one after d
 You can use Python's native virtual environment `venv` to setup the project
 
 ```bash
-   # Create a virtual environment
-   python3 -m venv <VENV_NAME>
+# Create a virtual environment
+python3 -m venv <VENV_NAME>
 ```
 
 You can then activate the environment and install the dependencies using the following commands -
@@ -75,22 +76,27 @@ You can then activate the environment and install the dependencies using the fol
 For UNIX-based systems (macOS / Linux):
 
 ```bash
-  # Activate virtual environment
-  source <VENV_NAME>/bin/activate
+# Activate virtual environment
+source <VENV_NAME>/bin/activate
 
-  # Install dependencies
-  pip install -r requirements.txt
+# Install dependencies
+pip install -r requirements.txt
 ```
 
 For Windows:
 
 ```powershell
-  # Activate virtual environment
-  .\<VENV_NAME>\Scripts\activate
+# Activate virtual environment
+.\<VENV_NAME>\Scripts\activate
 
-  # Install dependencies
-  pip install -r requirements.txt
+# Install dependencies
+pip install -r requirements.txt
 ```
+
+> [!TIP]
+> If you're using Python's native virtual environment `venv`, it is best practice to name your virtual environment `venv`.
+
+---
 
 ## Pushing to GitHub
 
