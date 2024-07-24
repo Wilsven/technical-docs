@@ -158,6 +158,12 @@ nav:
                           - projects/genai/health-hub/webapp/frontend/services/colour.md
                       - Pipes:
                           - projects/genai/health-hub/webapp/frontend/pipes/date.md
+                      - Types:
+                          - projects/genai/health-hub/webapp/frontend/types/cluster.md
+                          - projects/genai/health-hub/webapp/frontend/types/article.md
+                          - projects/genai/health-hub/webapp/frontend/types/edge.md
+                          - projects/genai/health-hub/webapp/frontend/types/sorter.md
+                          - projects/genai/health-hub/webapp/frontend/types/groups.md
                       - Utilities:
                           - projects/genai/health-hub/webapp/frontend/utilities/group_manager.md
                   - Backend:
