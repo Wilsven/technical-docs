@@ -140,7 +140,17 @@ extra_css:
   - styles/doculabels.css
 
 nav:
-  - Home: index.md
+  - Home:
+      - index.md
+      - Contribution Guides:
+          - home/contribution_guides/introduction.md
+          - home/contribution_guides/formatting.md
+          - home/contribution_guides/endpoints.md
+          - home/contribution_guides/classes_types_and_all.md
+      - Hooks:
+          - home/hooks/authors.md
+          - home/hooks/doculabels.md
+
   - Projects:
       - GenAI:
           - Health Hub:
