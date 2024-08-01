@@ -221,9 +221,9 @@ nav:
                   - projects/genai/example-project/section-two/index.md
                   - projects/genai/example-project/section-two/introduction.md
           - Conversational Assistant:
-            - Webapp: 
-              - Backend:
-                  - API:
-                    - projects/genai/conversational-assistant/webapp/backend/api/endpoints.md
+              - Webapp:
+                  - Backend:
+                      - API:
+                          - projects/genai/conversational-assistant/webapp/backend/api/endpoints.md
   - Articles:
       - blog/index.md

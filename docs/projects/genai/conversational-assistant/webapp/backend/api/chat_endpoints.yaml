@@ -24,13 +24,13 @@ components:
         chat_history:
           type: array
           items:
-            $ref: '#/components/schemas/Message'
+            $ref: "#/components/schemas/Message"
           maxItems: 8
         query:
-          $ref: '#/components/schemas/Message'
+          $ref: "#/components/schemas/Message"
         profile:
           type: object
-          $ref: '#/components/schemas/Profile'
+          $ref: "#/components/schemas/Profile"
       required:
         - chat_history
         - query
@@ -48,7 +48,7 @@ components:
         sources:
           type: array
           items:
-            $ref: '#/components/schemas/Sources'
+            $ref: "#/components/schemas/Sources"
           description: List of sources used for the response
         additional_question_1:
           type: string
@@ -69,15 +69,15 @@ components:
         chat_history:
           type: array
           items:
-            $ref: '#/components/schemas/Message'
+            $ref: "#/components/schemas/Message"
           maxItems: 8
         query:
           type: string
           format: binary
-          description: The audio file containing the response to the voice query
+          description: The audio file containing the voice query
         profile:
           type: object
-          $ref: '#/components/schemas/Profile'
+          $ref: "#/components/schemas/Profile"
       required:
         - chat_history
         - query
@@ -88,12 +88,15 @@ components:
       properties:
         message:
           type: string
-          format: binary 
-          description: The audio file containing the response to the voice query
+          description: Transcribed message from the voice query
+        audio:
+          type: string
+          format: binary
+          description: Audio file containing the response to user
         sources:
           type: array
           items:
-            $ref: '#/components/schemas/Sources'
+            $ref: "#/components/schemas/Sources"
           description: List of sources used for the response
         additional_question_1:
           type: string
@@ -103,6 +106,7 @@ components:
           description: Follow-up suggested question
       required:
         - message
+        - audio
         - sources
         - additional_question_1
         - additional_question_2
@@ -122,7 +126,7 @@ components:
         audio:
           type: string
           format: binary
-          description: The audio file containing the voiced out text message
+          description: Audio file containing the voiced out text message
       required:
         - audio
 
@@ -131,10 +135,11 @@ components:
       properties:
         role:
           type: string
-          description: The role of the message sender (USER or SYSTEM)
+          description: Role of the message sender (USER or SYSTEM)
+          enum: ["USER", "SYSTEM"]
         message:
           type: string
-          description: The content of the message
+          description: Content of the message
       required:
         - role
         - message
@@ -144,27 +149,27 @@ components:
       properties:
         profile_type:
           type: string
-          description: The type of profile (Myself or Others)
+          description: Type of profile (Myself or Others)
           enum: ["Myself", "Others"]
           example: Myself
         user_age:
           type: integer
-          description: The age of the user
+          description: Age of the user
           example: 30
         user_gender:
           type: string
-          description: The gender of the user (Male or Female)
+          description: Gender of the user (Male or Female)
           enum: ["Male", "Female"]
           example: "Female"
         user_condition:
           type: string
-          description: The medical condition of the user
+          description: Medical condition of the user
           example: "Diabetes and hypertension"
       required:
         - profile_type
 
     Sources:
-      type: object 
+      type: object
       properties:
         title:
           type: string
@@ -192,14 +197,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ChatMessageRequest'
+              $ref: "#/components/schemas/ChatMessageRequest"
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ChatMessageResponse'
+                $ref: "#/components/schemas/ChatMessageResponse"
 
   /voice:
     post:
@@ -212,15 +217,15 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/VoiceMessageRequest'
+              $ref: "#/components/schemas/VoiceMessageRequest"
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/VoiceMessageResponse'
-      
+                $ref: "#/components/schemas/VoiceMessageResponse"
+
   /tts:
     post:
       summary: To voice out text messages in the chat interface
@@ -232,12 +237,12 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/TTSRequest'
+              $ref: "#/components/schemas/TTSRequest"
 
       responses:
-        '200':
+        "200":
           description: Successful response
-          content: 
+          content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TTSResponse'
+                $ref: "#/components/schemas/TTSResponse"

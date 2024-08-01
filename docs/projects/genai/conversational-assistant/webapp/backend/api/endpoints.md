@@ -5,7 +5,7 @@ authors: Ho Si Xian
 
 # Endpoints
 
-The endpoints below are the endpoints to be implemented. 
+The endpoints below are the endpoints to be implemented.
 
 !!! NOTE "Proposed Endpoints and Data Interactions"
 
