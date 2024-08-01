@@ -13,6 +13,8 @@ tags:
     description: Endpoint to send chat messages via text using the chat interface
   - name: Voice
     description: Endpoint to send voice messages using the voice interface
+  - name: TextToSpeech
+    description: Endpoint to read out already generated text messages in the chat interface
 
 components:
   schemas:
@@ -42,7 +44,7 @@ components:
           description: The message content
         status:
           type: string
-          description: The status of the message streaming (pending or complete)
+          description: The status of the message streaming (pending or completed)
         sources:
           type: array
           items:
@@ -105,6 +107,25 @@ components:
         - additional_question_1
         - additional_question_2
 
+    TTSRequest:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Text message to be voiced out
+      required:
+        - message
+
+    TTSResponse:
+      type: object
+      properties:
+        audio:
+          type: string
+          format: binary
+          description: The audio file containing the voiced out text message
+      required:
+        - audio
+
     Message:
       type: object
       properties:
@@ -123,20 +144,22 @@ components:
       properties:
         profile_type:
           type: string
-          description: The type of profile (myself or others)
-          example: myself
+          description: The type of profile (Myself or Others)
+          enum: ["Myself", "Others"]
+          example: Myself
         user_age:
           type: integer
           description: The age of the user
           example: 30
         user_gender:
           type: string
-          description: The gender of the user (female or male)
-          example: "female"
+          description: The gender of the user (Male or Female)
+          enum: ["Male", "Female"]
+          example: "Female"
         user_condition:
           type: string
           description: The medical condition of the user
-          example: "diabetes and hypertension"
+          example: "Diabetes and hypertension"
       required:
         - profile_type
 
@@ -177,7 +200,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ChatMessageResponse'
-  ### voicechat endpoints
+
   /voice:
     post:
       summary: Send voice messages without streaming
@@ -198,4 +221,23 @@ paths:
               schema:
                 $ref: '#/components/schemas/VoiceMessageResponse'
       
-      
+  /tts:
+    post:
+      summary: To voice out text messages in the chat interface
+      tags:
+        - TextToSpeech
+      requestBody:
+        description: Message to be voiced out
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TTSRequest'
+
+      responses:
+        '200':
+          description: Successful response
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTSResponse'
