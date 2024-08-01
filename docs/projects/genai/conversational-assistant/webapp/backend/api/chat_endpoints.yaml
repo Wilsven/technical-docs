@@ -1,0 +1,199 @@
+openapi: 3.0.0
+
+info:
+  title: Conversational Assistant Backend
+  version: 0.0.1
+
+servers:
+  - url: http://localhost:8000
+    description: Local server hosted on the default port.
+
+tags:
+  - name: Chat
+    description: Endpoint to send chat messages via text using the chat interface
+  - name: Voice
+    description: Endpoint to send voice messages using the voice interface
+
+components:
+  schemas:
+    ChatMessageRequest:
+      type: object
+      properties:
+        chat_history:
+          type: array
+          items:
+            $ref: '#/components/schemas/Message'
+          maxItems: 8
+        query:
+          $ref: '#/components/schemas/Message'
+        profile:
+          type: object
+          $ref: '#/components/schemas/Profile'
+      required:
+        - chat_history
+        - query
+        - profile
+
+    ChatMessageResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: The message content
+        status:
+          type: string
+          description: The status of the message streaming (pending or complete)
+        sources:
+          type: object
+          $ref: '#/components/schemas/Sources'
+          description: List of sources used for the response
+        additional_question_1:
+          type: string
+          description: Follow-up suggested question
+        additional_question_2:
+          type: string
+          description: Follow-up suggested question
+      required:
+        - message
+        - status
+        - sources
+        - additional_question_1
+        - additional_question_2
+
+    VoiceMessageRequest:
+      type: object
+      properties:
+        chat_history:
+          type: array
+          items:
+            $ref: '#/components/schemas/Message'
+          maxItems: 8
+        query:
+          type: string
+          format: binary
+          description: The audio file containing the response to the voice query
+        profile:
+          type: object
+          $ref: '#/components/schemas/Profile'
+      required:
+        - chat_history
+        - query
+        - profile
+
+    VoiceMessageResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          format: binary 
+          description: The audio file containing the response to the voice query
+        sources:
+          type: object
+          $ref: '#/components/schemas/Sources'
+          description: List of sources used for the response
+        additional_question_1:
+          type: string
+          description: Follow-up suggested question
+        additional_question_2:
+          type: string
+          description: Follow-up suggested question
+      required:
+        - message
+        - sources
+        - additional_question_1
+        - additional_question_2
+
+    Message:
+      type: object
+      properties:
+        role:
+          type: string
+          description: The role of the message sender (USER or SYSTEM)
+        message:
+          type: string
+          description: The content of the message
+      required:
+        - role
+        - message
+
+    Profile:
+      type: object
+      properties:
+        profile_type:
+          type: string
+          description: The type of profile (myself or others)
+          example: myself
+        user_age:
+          type: integer
+          description: The age of the user
+          example: 30
+        user_gender:
+          type: string
+          description: The gender of the user (female or male)
+          example: "female"
+        user_condition:
+          type: string
+          description: The medical condition of the user
+          example: "diabetes and hypertension"
+      required:
+        - profile_type
+
+    Sources:
+      type: object 
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        meta_description:
+          type: string
+        image_url:
+          type: string
+      required:
+        - title
+        - url
+        - meta_description
+        - image_url
+
+paths:
+  /chat:
+    post:
+      summary: Send chat messages with streaming response
+      tags:
+        - Chat
+      requestBody:
+        description: Message to be sent
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatMessageRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatMessageResponse'
+  ### voicechat endpoints
+  /voice:
+    post:
+      summary: Send voice messages without streaming
+      tags:
+        - Voice
+      requestBody:
+        description: Message to be sent
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VoiceMessageRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoiceMessageResponse'
+      
+      
