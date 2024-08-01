@@ -44,8 +44,9 @@ components:
           type: string
           description: The status of the message streaming (pending or complete)
         sources:
-          type: object
-          $ref: '#/components/schemas/Sources'
+          type: array
+          items:
+            $ref: '#/components/schemas/Sources'
           description: List of sources used for the response
         additional_question_1:
           type: string
@@ -88,8 +89,9 @@ components:
           format: binary 
           description: The audio file containing the response to the voice query
         sources:
-          type: object
-          $ref: '#/components/schemas/Sources'
+          type: array
+          items:
+            $ref: '#/components/schemas/Sources'
           description: List of sources used for the response
         additional_question_1:
           type: string
