@@ -13,8 +13,6 @@ tags:
     description: Endpoint to send chat messages via text using the chat interface
   - name: Voice
     description: Endpoint to send voice messages using the voice interface
-  - name: VoiceStream
-    description: Endpoint to send voice messages using the voice interface with websocket
   - name: TextToSpeech
     description: Endpoint to read out already generated text messages in the chat interface
 
@@ -88,13 +86,16 @@ components:
     VoiceMessageResponse:
       type: object
       properties:
-        message:
+        response_message:
+          type: string
+          description: Text response received from rag output
+        query_message:
           type: string
           description: Transcribed message from the voice query
         audio:
           type: string
           format: binary
-          description: Audio file containing the response to user
+          description: Audio file of response_message
         sources:
           type: array
           items:
@@ -107,62 +108,11 @@ components:
           type: string
           description: Follow-up suggested question
       required:
-        - message
+        - response_message
+        - query_message
         - audio
         - sources
-        - additional_question_1
-        - additional_question_2
 
-    VoiceMessageWebSocketRequest:
-      type: object
-      properties:
-        text_requests:
-          properties:
-            chat_history:
-              type: array
-              items:
-                $ref: "#/components/schemas/Message"
-              maxItems: 8
-            query:
-              $ref: "#/components/schemas/Message"
-            profile:
-              type: object
-              $ref: "#/components/schemas/Profile"
-        audio:
-          type: string
-          format: binary
-          description: Audio file containing the voice query
-      required:
-        - text_requests
-        - audio
-
-    VoiceMessageWebSocketResponse:
-      type: object
-      properties:
-        text_response:
-          type: object
-          properties:
-            message:
-              type: string
-              description: Transcribed message from the voice query
-            sources:
-              type: array
-              items:
-                $ref: "#/components/schemas/Sources"
-              description: List of sources used for the response
-            additional_question_1:
-              type: string
-              description: Follow-up suggested question
-            additional_question_2:
-              type: string
-              description: Follow-up suggested question
-        audio:
-          type: string
-          format: binary
-          description: Audio file containing the response to user
-      required:
-        - text_response
-        - audio
     TTSRequest:
       type: object
       properties:
@@ -277,26 +227,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/VoiceMessageResponse"
-
-  /voice/stream:
-    post:
-      summary: Send voice messages with streaming
-      tags:
-        - VoiceStream
-      requestBody:
-        description: Message to be sent
-        required: true
-        content:
-          multipart/form-data:
-            schema:
-              $ref: "#/components/schemas/VoiceMessageWebSocketRequest"
-      responses:
-        "200":
-          description: Successful response
-          content:
-            multipart/form-data:
-              schema:
-                $ref: "#/components/schemas/VoiceMessageWebSocketResponse"
 
   /tts:
     post:
