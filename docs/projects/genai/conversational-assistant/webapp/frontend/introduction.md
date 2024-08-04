@@ -11,7 +11,7 @@ authors:
 The frontend for HealthierME 2.0 is build using Angular v18.
 
 | Domain    | Technology                              | Remarks                                                          |
-|-----------|-----------------------------------------|------------------------------------------------------------------|
+| --------- | --------------------------------------- | ---------------------------------------------------------------- |
 | Framework | [Angular v18](https://angular.dev/)     | Modularity between components and business logic.                |
 | Component | [PrimeNG](https://angular.dev/)         | Large range of components out of the box.                        |
 | Styling   | [TailwindCSS](https://tailwindcss.com/) | Fast tooling for styling of components.                          |
