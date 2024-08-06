@@ -211,7 +211,18 @@ nav:
                   - Misc:
                       - projects/genai/health-hub/webapp/misc/populator.md
                       - projects/genai/health-hub/webapp/misc/mocker.md
-
+          - Conversational Assistant:
+              - Webapp:
+                  - Frontend:
+                      - projects/genai/conversational-assistant/webapp/frontend/introduction.md
+                      - Services:
+                          - projects/genai/conversational-assistant/webapp/frontend/services/voice-activity-detection.md
+                          - projects/genai/conversational-assistant/webapp/frontend/services/chat-message.md
+                          - projects/genai/conversational-assistant/webapp/frontend/services/conversation-broker.md
+                          - projects/genai/conversational-assistant/webapp/frontend/services/endpoint.md
+                  - Backend:
+                      - API:
+                          - projects/genai/conversational-assistant/webapp/backend/api/endpoints.md
           - Example Project:
               - Section One:
                   - projects/genai/example-project/section-one/index.md
@@ -220,10 +231,5 @@ nav:
               - Section Two:
                   - projects/genai/example-project/section-two/index.md
                   - projects/genai/example-project/section-two/introduction.md
-          - Conversational Assistant:
-              - Webapp:
-                  - Backend:
-                      - API:
-                          - projects/genai/conversational-assistant/webapp/backend/api/endpoints.md
   - Articles:
       - blog/index.md
