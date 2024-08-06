@@ -39,12 +39,9 @@ components:
     ChatMessageResponse:
       type: object
       properties:
-        message:
+        response_message:
           type: string
           description: The message content
-        status:
-          type: string
-          description: The status of the message streaming (pending or completed)
         sources:
           type: array
           items:
@@ -57,8 +54,7 @@ components:
           type: string
           description: Follow-up suggested question
       required:
-        - message
-        - status
+        - response_message
         - sources
         - additional_question_1
         - additional_question_2
@@ -133,14 +129,14 @@ components:
       properties:
         role:
           type: string
-          description: Role of the message sender (user or system)
-          enum: ["user", "system"]
-        message:
+          description: Role of the message sender (user or assistant)
+          enum: ["user", "assistant"]
+        content:
           type: string
           description: Content of the message
       required:
         - role
-        - message
+        - content
 
     Profile:
       type: object
